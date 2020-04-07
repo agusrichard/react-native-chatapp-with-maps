@@ -1,4 +1,6 @@
-var firebaseConfig = {
+import firebase from 'firebase'
+
+const firebaseConfig = {
   apiKey: "AIzaSyBXE1e4kkTo_JOPopAILQUxweBS2f2W9RI",
   authDomain: "phrasal-agility-273503.firebaseapp.com",
   databaseURL: "https://phrasal-agility-273503.firebaseio.com",
@@ -9,5 +11,7 @@ var firebaseConfig = {
   measurementId: "G-KDSSX3XREL"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+let app = firebase.initializeApp(firebaseConfig);
+const db = app.database()
+
+export { db }
